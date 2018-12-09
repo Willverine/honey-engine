@@ -1,0 +1,22 @@
+{
+  "name": "honey-engine",
+  "version": "0.0.0",
+  "description": "Honey Engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "watch": "livereload . -p 3001",
+    "dev": "start npm run watch && start npm run start",
+    "start": "node index.js"
+  },
+  "author": "Will Owers",
+  "license": "MIT",
+  "devDependencies": {
+    "express": "^4.16.4",
+    "jest": "^23.6.0"
+  },
+  "dependencies": {
+    "nodemon": "^1.18.7",
+    "yarn": "^1.12.3"
+  }
+}
