@@ -5,15 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "watch-build": "watchify ./lib/client.js -o ./bundle.js --delay 0",
     "watch": "livereload . -p 3001",
-    "dev": "start npm run watch && start npm run start",
+    "dev": "start npm run watch && start npm run watch-build && start npm run start",
     "start": "node index.js"
   },
   "author": "Will Owers",
   "license": "MIT",
   "devDependencies": {
     "express": "^4.16.4",
-    "jest": "^23.6.0"
+    "jest": "^23.6.0",
+    "livereload": "^0.7.0"
   },
   "dependencies": {
     "nodemon": "^1.18.7",

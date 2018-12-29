@@ -1,4 +1,5 @@
 const canvasCreator = require('../lib/canvas_creator.js')
+document = require('../lib/helpers.js')
 
 // test.todo('Work out how to implement this test cause document is not available')
 test('Canvas is on the DOM', function () {
