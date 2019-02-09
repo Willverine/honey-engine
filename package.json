@@ -16,10 +16,16 @@
   "author": "Will Owers",
   "license": "MIT",
   "devDependencies": {
+    "canvas": "^2.3.1",
     "express": "^4.16.4",
     "jest": "^25.1.0",
-    "livereload": "^0.8.0",
+    "livereload": "^0.7.0",
     "node-sass": "^4.13.1",
-    "watchify": "^3.11.1"
+    "watchify": "^3.11.1",
+    "jsdom": "^13.2.0"
+  },
+  "dependencies": {
+    "nodemon": "^1.18.7",
+    "yarn": "^1.12.3"
   }
 }
