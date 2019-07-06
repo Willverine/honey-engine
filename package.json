@@ -6,8 +6,11 @@
   "scripts": {
     "test": "jest",
     "watch-build": "watchify ./lib/client.js -o ./bundle.js --delay 0",
+    "watch-build-scss": "node-sass -w ./lib/scss/ -o ./",
     "watch": "livereload . -p 3001",
+    "scss-compile": "node-sass ./lib/scss/ -o ./",
     "dev": "start npm run watch && start npm run watch-build && start npm run start",
+    "devmac": "npm run watch & npm run watch-build & npm run watch-build-scss & npm run start",
     "start": "node index.js"
   },
   "author": "Will Owers",
@@ -15,7 +18,9 @@
   "devDependencies": {
     "express": "^4.16.4",
     "jest": "^23.6.0",
-    "livereload": "^0.7.0"
+    "livereload": "^0.7.0",
+    "node-sass": "^4.12.0",
+    "watchify": "^3.11.1"
   },
   "dependencies": {
     "nodemon": "^1.18.7",
