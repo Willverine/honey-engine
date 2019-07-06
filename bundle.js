@@ -6,7 +6,8 @@ function createCanvas (width, height) { // creates a canvas and sets some generi
   canvas.width = width
   canvas.height = height
   canvas.style.borderColor = 'black'
-  document.body.appendChild(canvas)
+  canvas_wrapper = document.querySelector('.canvases')
+  canvas_wrapper.appendChild(canvas)
   canvas.context = canvas.getContext('2d')
   return canvas
 }
@@ -109,11 +110,13 @@ Client.load = function () {
   }
 
   canvasManager = require('./canvas_manager.js')
-  Client.gameCanvas = new canvasManager(Client.screenLength, Client.screenHeight)
+  // Client.gameCanvas = new canvasManager(Client.screenLength, Client.screenHeight)
+  Client.gameCanvas = new canvasManager(100, 100)
 }
 
-// module.exports = Client
-Client.load()
+window.onload = function () {
+  Client.load()
+}
 
 },{"./canvas_manager.js":2,"./state_stack.js":5}],4:[function(require,module,exports){
 /*
