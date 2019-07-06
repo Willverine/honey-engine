@@ -117,6 +117,7 @@ Client.load = function () {
 window.onload = function () {
   Client.load()
 }
+module.exports = Client
 
 },{"./canvas_manager.js":2,"./state_stack.js":5}],4:[function(require,module,exports){
 /*

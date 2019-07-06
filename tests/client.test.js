@@ -1,6 +1,10 @@
-const Client = require('../lib/client')
 console = require('../lib/helpers.js').console
 document = require('../lib/helpers.js').document
+window = require('../lib/helpers.js').window
+window.innerWidth = 1280
+window.innerHeight = 720
+
+const Client = require('../lib/client')
 canvasMock = require('../lib/helpers.js').canvasMock
 
 test('Client is set with default properties', function () {
@@ -17,10 +21,6 @@ test('Client is set with default properties', function () {
 })
 
 test('Client is loaded to expected starting properties', function () {
-  window = {
-    innerWidth: 1280,
-    innerHeight: 720
-  }
   let client = Client
   client.load()
 
@@ -33,7 +33,6 @@ test('Client is loaded to expected starting properties', function () {
   expect(client.clientY).toBe(0)
   expect(client.screenHeight).toBe(720)
   expect(client.screenLength).toBe(1280)
-  console.error(client.gameCanvas)
-  expect(client.gameCanvas.width).toBe(1280)
-  expect(client.gameCanvas.height).toBe(720)
+  expect(client.gameCanvas.width).toBe(100)
+  expect(client.gameCanvas.height).toBe(100)
 })
